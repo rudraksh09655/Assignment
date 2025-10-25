@@ -1,0 +1,102 @@
+info
+
+code
+Code
+
+preview
+Preview
+
+Deploy
+Deploy
+Robot
+I can see the issues! These are common ESLint errors when setting up a React project locally. Let me help you fix them:
+
+## **Quick Fix - Follow These Steps:**
+
+### **Step 1: Install Dependencies First** ⚠️
+
+Open terminal in VS Code and run:
+
+```bash
+
+# Make sure you're in the frontend folder
+
+cd frontend
+
+# Install all dependencies
+
+yarn install
+
+# OR if you don't have yarn
+
+npm install
+
+```
+
+### **Step 2: Fix ESLint Configuration**
+
+The errors are coming from ESLint not recognizing Node.js globals in config files. Let me create the proper ESLint config for you:
+
+Viewed
+/app/frontend
+Oct 25, 08:01 PM
+
+Rollback
+Rollback
+
+Copy
+Robot
+Let me check if there's an ESLint config file and create the proper one:
+
+ls -la /app/frontend/ | grep -i eslint
+Oct 25, 08:01 PM
+
+Rollback
+Rollback
+
+Copy
+Robot
+Globbing pattern **/eslint* in path /app/frontend
+Oct 25, 08:01 PM
+
+Rollback
+Rollback
+
+Copy
+Robot
+Hey Rudraksh, Quick input needed :
+Perfect! You need an ESLint configuration file. Let me create all the necessary config files for you:
+
+Create These Files in Your Frontend Folder:
+1. Create .eslintrc.json (in frontend folder)
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
